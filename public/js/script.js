@@ -22,7 +22,9 @@ if (!navigator.geolocation) {
 
 const map = L.map("map").setView([0, 0], 16);  // 0,0 is the lat and long, 16 is the zoom level of the map 
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
 
 const markers = {};
 
